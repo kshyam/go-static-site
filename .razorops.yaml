@@ -3,7 +3,7 @@ tasks:
     runner: razorci/golang
     steps:
     - docker/build:
-      image: go-static-site
+      image: github.com/kshyam/go-static-site
       dockerfile: Dockerfile
     - docker/push:
-      image: go-static-site
+      image: github.com/kshyam/go-static-site
