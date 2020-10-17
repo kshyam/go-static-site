@@ -1,10 +1,7 @@
-global:
-  runner: razorci/golang
-
 tasks:
   build-image:
+    runner: razorci/golang
     steps:
-    - run: git --version
     - docker/build:
       image: go-static-site
       tags: [latest,v1]
