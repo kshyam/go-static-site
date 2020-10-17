@@ -6,4 +6,4 @@ tasks:
       image: go-static-site
       dockerfile: Dockerfile
     - docker/push:
-      image: github.com/kshyam/go-static-site
+      image: go-static-site
