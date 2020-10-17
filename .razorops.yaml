@@ -4,8 +4,6 @@ tasks:
     steps:
     - docker/build:
       image: go-static-site
-      tags: [latest,v1]
       dockerfile: Dockerfile
     - docker/push:
       image: github.com/kshyam/go-static-site
-      tags: [latest,v1]
