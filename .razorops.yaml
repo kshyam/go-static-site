@@ -1,0 +1,12 @@
+global:
+  runner: razorci/golang
+
+tasks:
+  build-image:
+    steps:
+    - run: git --version
+    - docker/build:
+      image: example.com/hello
+      tags: [v1]
+      dockerfile: Dockerfile.build
+
