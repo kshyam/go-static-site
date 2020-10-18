@@ -11,6 +11,7 @@ tasks:
     runner:
       os_image: ubuntu
     steps:
+    - checkout
     - docker/build:
         image: docker.pkg.github.com/kshyam/go-static-site
         dockerfile: Dockerfile.build
