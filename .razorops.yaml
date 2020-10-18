@@ -2,8 +2,9 @@ tasks:
   build-image:
     runner: razorci/img
     steps:
+    - checkout
     - docker/build:
-        image: docker.pkg.github.com/kshyam/go-static-site
+        image: docker.pkg.github.com/kshyam/go-static-site/demo
         dockerfile: Dockerfile.build
         push: true
 
@@ -13,7 +14,7 @@ tasks:
     steps:
     - checkout
     - docker/build:
-        image: docker.pkg.github.com/kshyam/go-static-site
+        image: docker.pkg.github.com/kshyam/go-static-site/demo
         dockerfile: Dockerfile.build
         push: true
         tags: [latest_v1]
