@@ -1,8 +1,18 @@
 tasks:
   build-image:
-    runner: razorci/golang:1.15
+    runner: razorci/img
     steps:
     - docker/build:
         image: docker.pkg.github.com/kshyam/go-static-site
         dockerfile: Dockerfile.build
         push: true
+
+  build-image-vm:
+    runner:
+      os_image: ubuntu
+    steps:
+    - docker/build:
+        image: docker.pkg.github.com/kshyam/go-static-site
+        dockerfile: Dockerfile.build
+        push: true
+        tags: [latest_v1]
